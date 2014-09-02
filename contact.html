@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>MIT Pokemon League!</title>
+	<title>Contact Us</title>
 	<style>
 		@font-face{
 			font-family: 'Titillium';
@@ -84,14 +84,7 @@
 			width:calc(100%-40px);
 			position:relative;
 		}
-		#calendar{
-			position:relative;
-			width:355px;
-			height:100%;
-			display:inline-block;
-			float:left;
-		}
-		#announcements{
+		#about{
 			background-image:url("http://web.mit.edu/pokemon/images/headerOverlay.png");
 			display:inline-block;
 			position:relative;
@@ -99,6 +92,20 @@
 			border-radius:20px;
 			padding:20px 20px 20px 20px;
 			margin-bottom:20px;
+		}
+		#sign_up{
+			position:relative;
+			height:300px;
+		}
+		#sign_up > a > img{
+			position:absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			margin:auto;
+			height:300px;
+			border-radius:20px;
 		}
 	</style>
 	<script src="http://web.mit.edu/pokemon/jquery-1.11.1.min.js"></script>
@@ -141,11 +148,13 @@
 	</div>
 	</div>
 	<div id="content">
-		<div id="calendar">
-			<iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dsge3j7jifmnls7cps4ogs65do%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FNew_York" style=" border-width:0 " width="335" height="100%" frameborder="0" scrolling="no"></iframe>
-		</div>
-		<div id="announcements">
-			<p>Hello! I'm the Pokemon WebMaster, and I like bad jokes. Site is currently under construction, pardon the mess!</p>
+		<div id="about">
+			<h1>Contact Us</h1>
+			<p>To stay up-to-date with events, schedule changes, etc., <a href="http://mailman.mit.edu/mailman/listinfo/pokemonleague">sign up</a> for our low-traffic mailing list, <strong>pokemonleague@mit.edu!</strong> Don't send emails to that address; messages to the mailing list require admin approval.</p>
+			<p>Send messages for our leadership to <strong>pokemonmasters@mit.edu.</strong> Any website issues should be directed to <strong>pokemonwebmasters@mit.edu.</strong></p>
+			<div id="sign_up">
+				<a href="http://mailman.mit.edu/mailman/listinfo/pokemonleague"><img src="http://web.mit.edu/pokemon/images/mailinglist.jpg"/></a>
+			</div>
 			<br><p style="text-align:center;">Pok&eacute;mon is &copy;1995-2014 Nintendo, Creatures, and GAMEFREAK.</p>
 		</div>
 	</div>
