@@ -12,9 +12,32 @@
 			font-weight: bold;
 			src:url("http://web.mit.edu/pokemon/font/Titillium-Bold.otf");	
 		}
+		@font-face{
+			font-family: 'Titillium';
+			font-style:italic;
+			src:url("http://web.mit.edu/pokemon/font/Titillium-RegularItalic.otf");	
+		}
 		body{
 			font-family: 'Titillium';
-			background-image:url("http://web.mit.edu/pokemon/images/backgroundtile.png");
+			/*background-image:url("http://web.mit.edu/pokemon/images/backgroundtile.png");*/
+			background: -webkit-linear-gradient(bottom, #206DA1, #ffffff); /* For Safari 5.1 to 6.0 */
+	 		background: -o-linear-gradient(bottom, #206DA1, #ffffff); /* For Opera 11.1 to 12.0 */
+	 		background: -moz-linear-gradient(bottom, #206DA1, #ffffff); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to bottom, #206DA1, #ffffff); /* Standard syntax */
+			min-height:100%;
+			margin:0;
+			padding:0;
+		}
+		html{
+			min-height:100%;
+			margin:0;
+			padding:0;
+		}
+		#shadow{
+			position:fixed;
+			bottom:20px;
+			right:20px;
+			z-index:0;
 		}
 		/*Header Styles*/
 		#header_wrap{
@@ -79,19 +102,22 @@
 		}
 		/*Content Styles*/
 		#content{
-			margin:20px 20px 20px 20px;
-			height:calc(100%-230px);
-			width:calc(100%-40px);
+			margin-top:20px;
+			margin-bottom:20px;
+			margin-left:calc((100% - 970px)/2);
+			margin-right:calc();
+			height:calc(100% - 260px);
+			width:970px;
 			position:relative;
 		}
 		#about{
 			background-image:url("http://web.mit.edu/pokemon/images/headerOverlay.png");
-			display:inline-block;
 			position:relative;
 			float:left;
 			border-radius:20px;
 			padding:20px 20px 20px 20px;
 			margin-bottom:20px;
+			width:calc(100% - 40px);
 		}
 		#sign_up{
 			position:relative;
@@ -110,9 +136,14 @@
 	</style>
 	<script src="http://web.mit.edu/pokemon/jquery-1.11.1.min.js"></script>
 	<script>
+		$(document).ready(function(){
+			var num = ("000" + (Math.floor((Math.random() * 718) + 1)).toString()).slice(-3);
+			$('#shadow').append("<img src='http://web.mit.edu/pokemon/images/shadows/" + num + "%20copy.png'/>");
+		});
 	</script>
 </head>
 <body>
+	<div id="shadow"></div>
 	<div id="header_wrap">
 	<div id="header">
 		<!--Contains all navigation buttons-->
@@ -125,14 +156,18 @@
 				<span>About</span>
 			</div>
 		</a>
+		<a href="http://web.mit.edu/pokemon/calendar.html">
 			<div class="pokeball">
 				<img src="http://web.mit.edu/pokemon/images/ultraball.png"/>
 				<span>Calendar</span>
 			</div>
+		</a>
+		<a href="http://web.mit.edu/pokemon/announcements.html">
 			<div class="pokeball">
 				<img src="http://web.mit.edu/pokemon/images/diveball.png"/>
 				<span>Announcements</span>
 			</div>
+		</a>
 		<a href="http://web.mit.edu/pokemon/locations.html">
 			<div class="pokeball">
 				<img src="http://web.mit.edu/pokemon/images/nestball.png"/>
